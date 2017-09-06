@@ -33,7 +33,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let anno02 = MKPointAnnotation()
         anno02.coordinate.latitude = 35.168444
         anno02.coordinate.longitude = 129.057832
-        anno02.title = "부산시민공원"
+        anno02.title = "부산시민공원!"
         anno02.subtitle = "부산시민들의 휴식처"
         
         myMapView.addAnnotation(anno01)
@@ -52,7 +52,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             annotationView?.canShowCallout = true
             
-            if annotation.title! == "부산시민공원" {
+            if annotation.title! == "부산시민공원!" {
                 annotationView?.pinTintColor = UIColor.green
             }
             
@@ -62,7 +62,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         
         let leftIconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 53, height: 53))
-        if annotation.title! == "부산시민공원"{
+        if annotation.title! == "부산시민공원!"{
             leftIconView.image = UIImage(named:"bright-7.png" )
         }else{
             leftIconView.image = UIImage(named:"st.jpg" )
